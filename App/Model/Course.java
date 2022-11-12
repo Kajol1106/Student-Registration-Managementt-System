@@ -6,6 +6,8 @@ public class Course {
 	private long courseFee;
 	private String cDuration;
 	private String cStartDate;
+	private int totalSeat;
+	private int availableSeat;
 	
 	public Course() {
 		
@@ -18,6 +20,8 @@ public class Course {
 		this.courseFee = courseFee;
 		this.cDuration = cDuration;
 		this.cStartDate = cStartDate;
+		this.totalSeat = totalSeat;
+		this.availableSeat = availableSeat;
 	}
 
 	public int getCid() {
@@ -60,10 +64,26 @@ public class Course {
 		this.cStartDate = cStartDate;
 	}
 
+	public int getTotalSeat() {
+		return totalSeat;
+	}
+
+	public void setTotalSeat(int totalSeat) {
+		this.totalSeat = totalSeat;
+	}
+
+	public int getAvailableSeat() {
+		return availableSeat;
+	}
+
+	public void setAvailableSeat(int availableSeat) {
+		this.availableSeat = availableSeat;
+	}
+
 	@Override
 	public String toString() {
 		return "Course [cid=" + cid + ", cname=" + cname + ", courseFee=" + courseFee + ", cDuration=" + cDuration
-				+ ", cStartDate=" + cStartDate + "]";
+				+ ", cStartDate=" + cStartDate + ", totalSeat=" + totalSeat + ", availableSeat=" + availableSeat + "]";
 	}
 	
 }
