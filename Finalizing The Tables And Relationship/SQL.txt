@@ -108,8 +108,10 @@ mysql> desc course;
 | CourseFee      | int         | NO   |     | NULL    |                |
 | CourseDuration | varchar(30) | NO   |     | NULL    |                |
 | CourseStart    | date        | NO   |     | NULL    |                |
+| TotalSeat      | int         | NO   |     | NULL    |                |
+| AvailableSeat  | int         | YES  |     | NULL    |                |
 +----------------+-------------+------+-----+---------+----------------+
-5 rows in set (0.00 sec)
+7 rows in set (0.06 sec)
 
 
 ==================================================================================================================================================================================
