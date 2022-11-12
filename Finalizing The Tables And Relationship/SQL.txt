@@ -1,0 +1,137 @@
+mysql> create database Student_Management_System;
+Query OK, 1 row affected (0.03 sec)
+
+mysql> use Student_management_system;
+Database changed
+mysql> show tables;
+Empty set (0.02 sec)
+
+
+
+1) Admin Table : 
+
+mysql> create table admin(
+    ->     AdminId int primary key auto_increment,
+    ->     AdminName varchar(30),
+    ->     AdminMobile varchar(12),
+    ->     AdminAddress varchar(30),
+    ->     AdminEmail varchar(40) not null unique,
+    ->     AdminPassword varchar(40) not null
+    -> );
+Query OK, 0 rows affected (0.18 sec)
+
+mysql> desc admin;
++---------------+-------------+------+-----+---------+----------------+
+| Field         | Type        | Null | Key | Default | Extra          |
++---------------+-------------+------+-----+---------+----------------+
+| AdminId       | int         | NO   | PRI | NULL    | auto_increment |
+| AdminName     | varchar(30) | YES  |     | NULL    |                |
+| AdminMobile   | varchar(12) | YES  |     | NULL    |                |
+| AdminAddress  | varchar(30) | YES  |     | NULL    |                |
+| AdminEmail    | varchar(40) | NO   | UNI | NULL    |                |
+| AdminPassword | varchar(40) | NO   |     | NULL    |                |
++---------------+-------------+------+-----+---------+----------------+
+6 rows in set (0.02 sec)
+
+
+** Hard Code Value For Admin**
+
+mysql> insert into admin (AdminId, AdminName, AdminMobile, AdminAddress, AdminEmail, AdminPassword) values(1, "Admin1", "1234567890", "Latur", "a1@gmail.com", "admin1");
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into admin (AdminId, AdminName, AdminMobile, AdminAddress, AdminEmail, AdminPassword) values(2, "Admin2", "0987654321", "Nanded", "a2@gmail.com", "admin2");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from admin;
++---------+-----------+-------------+--------------+--------------+---------------+
+| AdminId | AdminName | AdminMobile | AdminAddress | AdminEmail   | AdminPassword |
++---------+-----------+-------------+--------------+--------------+---------------+
+|       1 | Admin1    | 1234567890  | Latur        | a1@gmail.com | admin1        |
+|       2 | Admin2    | 0987654321  | Nanded       | a2@gmail.com | admin2        |
++---------+-----------+-------------+--------------+--------------+---------------+
+2 rows in set (0.00 sec)
+
+
+==================================================================================================================================================================================
+
+
+2) Student Table :
+
+mysql> create table student(
+    ->     StudentRoll int primary key auto_increment,
+    ->     StudentName varchar(20) not null,
+    ->     StudentEmail varchar(40) unique,
+    ->     StudentPassword varchar(40) not null,
+    ->     StudentMobile varchar(12),
+    ->     StudentAddress varchar(50),
+    ->     StudentBatch varchar(50),
+    ->     StudentAdmissionDate DATE
+    -> );
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc student;
++----------------------+-------------+------+-----+---------+----------------+
+| Field                | Type        | Null | Key | Default | Extra          |
++----------------------+-------------+------+-----+---------+----------------+
+| StudentRoll          | int         | NO   | PRI | NULL    | auto_increment |
+| StudentName          | varchar(20) | NO   |     | NULL    |                |
+| StudentEmail         | varchar(40) | YES  | UNI | NULL    |                |
+| StudentPassword      | varchar(40) | NO   |     | NULL    |                |
+| StudentMobile        | varchar(12) | YES  |     | NULL    |                |
+| StudentAddress       | varchar(50) | YES  |     | NULL    |                |
+| StudentBatch         | varchar(50) | YES  |     | NULL    |                |
+| StudentAdmissionDate | date        | YES  |     | NULL    |                |
++----------------------+-------------+------+-----+---------+----------------+
+8 rows in set (0.00 sec)
+
+
+==================================================================================================================================================================================
+
+
+3) Course Table : 
+
+mysql> create table course(
+    ->     CourseId int primary key auto_increment,
+    ->     CourseName varchar(12),
+    ->     CourseFee int not null,
+    ->     CourseDuration varchar(30) not null,
+    ->     CourseStart DATE not null
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> desc course;
++----------------+-------------+------+-----+---------+----------------+
+| Field          | Type        | Null | Key | Default | Extra          |
++----------------+-------------+------+-----+---------+----------------+
+| CourseId       | int         | NO   | PRI | NULL    | auto_increment |
+| CourseName     | varchar(12) | YES  |     | NULL    |                |
+| CourseFee      | int         | NO   |     | NULL    |                |
+| CourseDuration | varchar(30) | NO   |     | NULL    |                |
+| CourseStart    | date        | NO   |     | NULL    |                |
++----------------+-------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+
+==================================================================================================================================================================================
+
+
+4) Many to Many Relationship for Student, Course Table :
+
+mysql> create table student_course(
+    ->     StudentRoll int,
+    ->     CourseId int,
+    ->     foreign key(CourseId) references course(CourseId),
+    ->     foreign key(StudentRoll) references student(StudentRoll)
+    -> );
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> desc student_course;
++-------------+------+------+-----+---------+-------+
+| Field       | Type | Null | Key | Default | Extra |
++-------------+------+------+-----+---------+-------+
+| StudentRoll | int  | YES  | MUL | NULL    |       |
+| CourseId    | int  | YES  | MUL | NULL    |       |
++-------------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+
