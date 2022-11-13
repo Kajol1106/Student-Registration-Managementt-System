@@ -1,4 +1,4 @@
-Hii, This is a Student Management System Project Using JDBC, SQL and Core Java topics.
+**Hii, This is a Student Management System Project Using JDBC, SQL and Core Java topics.
 This is a console based application.
 
 Output :
@@ -221,26 +221,26 @@ login successfully..
  
 *****************************Welcome To Student Management App Student 🤴kaju@gmail.com*****************************
 
-Press 1 : Update your password
+**Press 1 : Update your password
 Press 2 : Update your email id
 Press 3 : Update your Mobile number
 Press 4 : Update your address
 Press 5 : View all available course list and their seat availability
 Press 0 : Log out
-0
+0**
 
-//Exit App
+**//Exit App
 Press 1 : If you are a Administrator
 Press 2 : If your are a Student
 Press 0 : Exit App
-0
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+0**
+**++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 |                                                        |
 |            --Thank You for Visiting--                  |
 |                                                        |
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++**
 
-If You Enjoyed, Please Experience It Again!
+**If You Enjoyed, Please Experience It Again!**
 
 
 
