@@ -1,8 +1,8 @@
-**Hii, This is a Student Management System Project Using JDBC, SQL and Core Java topics.
-This is a console based application.
+**Hii, This is a Student Management System Project Using JDBC, SQL and Core Java topics.**
+**This is a console based application.**
 
-Output :
-//main part
+**Output :**
+**//main part**
 *************************************************************************
 |                                                        				|
 |            --Welcome to Student Management System ---                 |
