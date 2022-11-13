@@ -26,6 +26,16 @@ public class Student {
 		this.batch = batch;
 		this.admissionDate = admissionDate;
 	}
+	
+	public Student(String name, String email, String password, String mobile, String address, String batch) {
+		super();
+		this.name = name;
+		this.email = email;
+		this.password = password;
+		this.mobile = mobile;
+		this.address = address;
+		this.batch = batch;
+	}
 
 	public int getRoll() {
 		return roll;

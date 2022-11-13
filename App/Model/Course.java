@@ -5,24 +5,44 @@ public class Course {
 	private String cname;
 	private long courseFee;
 	private String cDuration;
-	private String cStartDate;
+	private String cStart;
 	private int totalSeat;
 	private int availableSeat;
-	
-	public Course() {
-		
-	}
 
-	public Course(int cid, String cname, long courseFee, String cDuration, String cStartDate) {
+
+	public Course(int cid, String cname, long courseFee, String cDuration, String cStart, int totalSeat,
+			int availableSeat) {
 		super();
 		this.cid = cid;
 		this.cname = cname;
 		this.courseFee = courseFee;
 		this.cDuration = cDuration;
-		this.cStartDate = cStartDate;
+		this.cStart = cStart;
 		this.totalSeat = totalSeat;
 		this.availableSeat = availableSeat;
 	}
+	
+	public Course(String cname, long courseFee, String cDuration, String cStart, int totalSeat,
+			int availableSeat) {
+		super();
+		this.cname = cname;
+		this.courseFee = courseFee;
+		this.cDuration = cDuration;
+		this.cStart = cStart;
+		this.totalSeat = totalSeat;
+		this.availableSeat = availableSeat;
+	}
+	
+	public Course(int cid, String cname, long courseFee, String cDuration, String cStart, int totalSeat) {
+		super();
+		this.cid = cid;
+		this.cname = cname;
+		this.courseFee = courseFee;
+		this.cDuration = cDuration;
+		this.cStart = cStart;
+		this.totalSeat = totalSeat;
+	}
+
 
 	public int getCid() {
 		return cid;
@@ -55,13 +75,13 @@ public class Course {
 	public void setcDuration(String cDuration) {
 		this.cDuration = cDuration;
 	}
-
-	public String getcStartDate() {
-		return cStartDate;
+	
+	public String getcStart() {
+		return cDuration;
 	}
 
-	public void setcStartDate(String cStartDate) {
-		this.cStartDate = cStartDate;
+	public void setcStart(String cDuration) {
+		this.cDuration = cDuration;
 	}
 
 	public int getTotalSeat() {
@@ -83,7 +103,8 @@ public class Course {
 	@Override
 	public String toString() {
 		return "Course [cid=" + cid + ", cname=" + cname + ", courseFee=" + courseFee + ", cDuration=" + cDuration
-				+ ", cStartDate=" + cStartDate + ", totalSeat=" + totalSeat + ", availableSeat=" + availableSeat + "]";
+				+ ", cStart=" + cStart +", totalSeat=" + totalSeat + ", availableSeat=" + availableSeat + "]";
 	}
+
 	
 }
