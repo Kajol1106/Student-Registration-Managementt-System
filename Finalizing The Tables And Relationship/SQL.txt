@@ -100,18 +100,18 @@ mysql> create table course(
 Query OK, 0 rows affected (0.02 sec)
 
 mysql> desc course;
-+----------------+-------------+------+-----+---------+----------------+
-| Field          | Type        | Null | Key | Default | Extra          |
-+----------------+-------------+------+-----+---------+----------------+
-| CourseId       | int         | NO   | PRI | NULL    | auto_increment |
-| CourseName     | varchar(12) | YES  |     | NULL    |                |
-| CourseFee      | int         | NO   |     | NULL    |                |
-| CourseDuration | varchar(30) | NO   |     | NULL    |                |
-| CourseStart    | date        | NO   |     | NULL    |                |
-| TotalSeat      | int         | NO   |     | NULL    |                |
-| AvailableSeat  | int         | YES  |     | NULL    |                |
-+----------------+-------------+------+-----+---------+----------------+
-7 rows in set (0.06 sec)
++-----------------+-------------+------+-----+---------+----------------+
+| Field           | Type        | Null | Key | Default | Extra          |
++-----------------+-------------+------+-----+---------+----------------+
+| CourseId        | int         | NO   | PRI | NULL    | auto_increment |
+| CourseName      | varchar(12) | YES  |     | NULL    |                |
+| CourseFee       | int         | NO   |     | NULL    |                |
+| CourseDuration  | varchar(30) | NO   |     | NULL    |                |
+| CourseStartDate | varchar(20) | YES  |     | NULL    |                |
+| TotalSeat       | int         | YES  |     | NULL    |                |
+| AvailableSeat   | int         | YES  |     | NULL    |                |
++-----------------+-------------+------+-----+---------+----------------+
+7 rows in set (0.01 sec)
 
 
 ==================================================================================================================================================================================
