@@ -1,6 +1,6 @@
 # Student Registration Management System
 
-###Problem Description :
+### Problem Description :
 <p> In an Educational Institute, every year technology training is conducted during the summer and winter seasons. Students are enrolled in different courses under different technology tracks like- Android, Java, JEE, PHP, Oracle, etc. This automated application help Institute to enroll students efficiently, create batches under a course, and allocates the students in a batch. </p>
 
 ## User of the System :
