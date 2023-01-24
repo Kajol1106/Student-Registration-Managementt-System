@@ -28,4 +28,9 @@
 2. To update these details
 3. Get all the courses
 ```
+#### Explaination video link :
+ <h3 align="center"><a href="https://drive.google.com/file/d/1IVw4nsf4rUXbDA4NTRNb65sH2vHRnImH/view?usp=share_link"><strong>Want to see live Explination »</strong></a></h3>
 
+<h5>The ER-Diagram is shown below :</h5>
+
+![project er diagram](https://user-images.githubusercontent.com/107916214/204328509-5dd037d2-d10d-4c5d-8b7b-65bb296438c6.png)
