@@ -19,7 +19,7 @@
 6. Add a student to a batch
 7. View all the students
 8. View the students of every batch
-9.View all the course details
+9. View all the course details
 ```
 
 #### Roles for Students  :
